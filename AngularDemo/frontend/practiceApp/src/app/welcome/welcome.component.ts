@@ -19,8 +19,8 @@ export class WelcomeComponent implements OnInit {
    messageFromService :string
    errorMessageFromService :string
   ButtonClick(){
-     console.log (this.service.PrintMessageBean("govind"))
-     this.service.PrintMessageBean("govind").subscribe(response=>this.PrintResponseFromService(response),error =>this.PrintErrorFromService(error) )
+     console.log (this.service.PrintMessageBean())
+     this.service.PrintMessageBean().subscribe(response=>this.PrintResponseFromService(response),error =>this.PrintErrorFromService(error) )
   }
 
 

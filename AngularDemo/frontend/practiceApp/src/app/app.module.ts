@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,8 +12,6 @@ import { TodosComponent } from './todos/todos.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { UpdateAddTodoComponent } from './update-add-todo/update-add-todo.component';
-import { LogoutComponent } from './logout/logout.component';
-import { HttpInterceptorBasicAuthService } from './service/http/http-interceptor-basic-auth.service';
 
 @NgModule({
   declarations: [
@@ -24,8 +22,7 @@ import { HttpInterceptorBasicAuthService } from './service/http/http-interceptor
     TodosComponent,
     MenuComponent,
     FooterComponent,
-    UpdateAddTodoComponent,
-    LogoutComponent
+    UpdateAddTodoComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +30,7 @@ import { HttpInterceptorBasicAuthService } from './service/http/http-interceptor
     FormsModule,
     HttpClientModule
   ],
-  providers: [
-    {provide: HTTP_INTERCEPTORS,useClass : HttpInterceptorBasicAuthService,multi:true}
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

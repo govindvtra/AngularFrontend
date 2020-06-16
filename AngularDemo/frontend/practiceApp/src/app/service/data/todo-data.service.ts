@@ -20,14 +20,4 @@ export class TodoDataService {
   retrieveTodo(username,id){
     return this.http.get<Todo>(`http://localhost:8080/users/${username}/todos/${id}`)
   }
-
-  updateTodo(username,id,todos){
-    return this.http.put<Todo>(`http://localhost:8080/users/${username}/todos/${id}`,todos)
-  }
-   
-  addTodo(username,todos){
-    return this.http.post<Todo>(`http://localhost:8080/users/${username}/todos/`,todos)
-  }
-  }
-
-  
+}

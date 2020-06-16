@@ -1,0 +1,15 @@
+
+<h1>Login!!</h1>
+<div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input [(ngModel)]="username" type="text" placeholder="Enter Username"  required>
+    <br> 
+    <label for="psw"><b>Password</b></label>
+    <input [(ngModel)]="password" type="password" placeholder="Enter Password"  required>
+     <br>   
+    <button class="btn btn-success" type="submit" (click)="ButtonClickAction()">Login</button>
+    <br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>

@@ -5,17 +5,15 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ErrorComponent } from './error/error.component';
 import { TodosComponent } from './todos/todos.component';
 import { UpdateAddTodoComponent } from './update-add-todo/update-add-todo.component';
-import { LogoutComponent } from './logout/logout.component';
-import { RouteGuardService } from './service/route-guard.service';
 
 
 const routes: Routes = [
   {path:'', component: LoginComponent},
   {path:'login', component: LoginComponent},
-  {path:'welcome/:name', component: WelcomeComponent,canActivate:[RouteGuardService]},// canactivte can include multiple guards thats why its an array
-  {path:'todos', component: TodosComponent,canActivate:[RouteGuardService]},
-  {path:'todos/:id',component:UpdateAddTodoComponent,canActivate:[RouteGuardService]},
-  {path:'logout', component: LogoutComponent,canActivate:[RouteGuardService]}
+  {path:'welcome/:name', component: WelcomeComponent},
+  {path:'todos', component: TodosComponent},
+  {path:'todos/:id',component:UpdateAddTodoComponent},
+  {path:'**', component: ErrorComponent}
 
 
 

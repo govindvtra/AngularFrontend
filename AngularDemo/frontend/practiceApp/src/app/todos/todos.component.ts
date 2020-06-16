@@ -24,9 +24,7 @@ export class TodosComponent implements OnInit {
   
 
    message: string
-   success: string
   todos: Todo[]
-  todo :Todo
   constructor(private todoService:TodoDataService,private router:Router) { }
     
   ngOnInit(): void {
@@ -57,14 +55,6 @@ export class TodosComponent implements OnInit {
         //this.todoService.updateTodos("govind",id).subscribe()
         this.router.navigate(['todos',id])
 
-  }
-  addAction(){
-    // this.todoService.addTodo("govind",this.todo).subscribe(response=>{
-    //   this.success="Todo Added Successfully"
-    //   this.refreshTodos()
-
-    // })
-    this.router.navigate(['todos',-1])
   }
   
 

@@ -1,6 +1,5 @@
 <h1>My Todos</h1>
 <div class="alert alert-success" *ngIf="message">{{message}}</div>
-<!-- <div class="alert alert-success" *ngIf="success">{{success}}</div> -->
 <div class="container">
     <table class="table">
        
@@ -26,9 +25,7 @@
                 <td> <button (click)="deleteButtonAction(todo.id)" class="btn btn-warning" type="submit">Delete</button></td>
             </tr>
         </tbody>
-       
+
 
     </table>
-
-    <button class="btn btn-success" type="submit"  (click)="addAction()">Add</button>
 </div>
