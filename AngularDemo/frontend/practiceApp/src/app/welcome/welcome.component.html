@@ -1,0 +1,13 @@
+Welcome!!
+
+Click <a routerLink="/todos">here</a>  to view todos
+
+Click the button to print a customized message <button class="btn btn-success" type="submit" (click)="ButtonClick()">See Message</button>
+
+<div class="container"*ngIf="messageFromService">
+    <h2>Here is the custom message you see</h2> <br>{{messageFromService}}
+</div>
+
+<div class="container"*ngIf="errorMessageFromService">
+        <h2>{{errorMessageFromService}}</h2> <br>
+</div>
